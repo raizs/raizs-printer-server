@@ -2,8 +2,8 @@ import ControllersFactory from '../../controllers/ControllersFactory';
 
 export default class RequestHandler {
 
-	constructor(app, postgres, firebase) {
-		this.controllersFactory = new ControllersFactory(app, postgres, firebase);
+	constructor(app) {
+		this.controllersFactory = new ControllersFactory(app);
 
 		this.get = this.get.bind(this);
 		this.post = this.post.bind(this);

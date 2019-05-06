@@ -1,5 +1,9 @@
 import printer from "printer";
 import fs from "fs";
+import { spawn, exec } from 'child_process';
+import { join } from 'async-child-process';
+import ngrok from "ngrok"
+import axios from "axios"
 
 export class PrinterController {
 
@@ -19,9 +23,37 @@ export class PrinterController {
 		//     }
 		// });
 
-  	fs.readFile(__dirname + '/file.pdf', function (err, data) {
-  		console.log(data)
-	  if (err) throw err;
-	});
+ //  	fs.readFile(__dirname + '/file.pdf', function (err, data) {
+ //  		console.log(data)
+	//   if (err) throw err;
+	// });
+		return {
+			"success": true		
+		}
    }
+
+
+	async startServer(){
+		console.log("starting")
+		await ngrok.kill()
+		await ngrok.disconnect()
+		const address = await ngrok.connect(3300);
+		// const address = "await ngrok.connect(3300);"
+		console.log(address)
+		const url = "http://raizs.odoo.com/print-address/set"
+		const body = {
+			params:{
+				address: address,
+			}
+		}
+		axios.post(url, body)
+			.then(function (response) {
+			console.log(response);
+			})
+			.catch(function (error) {
+			console.log("error");
+			});
+
+	}
 }
+		
