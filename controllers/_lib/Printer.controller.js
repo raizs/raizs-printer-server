@@ -34,12 +34,9 @@ export class PrinterController {
 
 
 	async startServer(){
-		console.log("starting")
 		await ngrok.kill()
 		await ngrok.disconnect()
 		const address = await ngrok.connect(3300);
-		// const address = "await ngrok.connect(3300);"
-		console.log(address)
 		const url = "http://raizs.odoo.com/print-address/set"
 		const body = {
 			params:{
