@@ -1,0 +1,20 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "048513456564.dkr.ecr.us-west-2.amazonaws.com/adcart-api:DUMMY_ENV",
+    "Update": "true"
+  },
+  "Ports": [
+    {
+      "HostPort": "80",
+      "ContainerPort": "3301"
+    }
+  ],
+  "Volumes": [
+    {
+      "HostDirectory": "/var/app/node",
+      "ContainerDirectory": "/etc/node"
+    }
+  ],
+  "Logging": "/var/log/nginx"
+}

@@ -1,0 +1,11 @@
+/node_modules/
+dump/
+dump.rdb
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+config/raizs-api-firebase-adminsdk-pbo0l-818d0347ff.json
+config/config.json

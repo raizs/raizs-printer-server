@@ -1,0 +1,21 @@
+SELECT phone, COUNT(*)
+FROM res_partner GROUP BY phone
+HAVING COUNT(*) > 1;
+
+SELECT email, COUNT(*)
+FROM res_partner GROUP BY email
+HAVING COUNT(*) > 1;
+
+/* emails */
+select email, name, phone from res_partner where res_partner.email = 'edgar@lemanjue.com.br';
+select email, name, phone from res_partner where res_partner.email = 'arthur@raizs.com.br';
+select email, name, phone from res_partner where res_partner.email = 'renata.costa@nkstore.com.br';
+select email, name, phone from res_partner where res_partner.email = 'fernanda.basso.nutri@gmail.com';
+select email, name, phone from res_partner where res_partner.email = 'gabriel@raizs.com.br';
+
+/* phones */
+select email, name, phone from res_partner where res_partner.phone = '+551120120177';
+select email, name, phone from res_partner where res_partner.phone = '11984443404';
+select email, name, phone from res_partner where res_partner.phone = '38972628';
+select email, name, phone from res_partner where res_partner.phone = '30443601';
+select email, name, phone from res_partner where res_partner.phone = '+5511962609447';

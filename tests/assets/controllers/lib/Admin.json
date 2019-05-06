@@ -1,0 +1,8 @@
+{
+ 	"MONGO_SAMPLE_ADMIN": {
+    "_id" : "5a58b132b249051517e94cb6",
+    "email" : "admin@adcart.com.br",
+    "password" : "$2a$10$.H0A0.m8cGFLytpuGjpiku.QBuSLlFV.zbYeNMhJbD5tvksrlswRO",
+    "name" : "admin"
+	}
+}

@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR
+      - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
+      - REPOSITORY_URI=048513456564.dkr.ecr.us-west-2.amazonaws.com/adcart-api
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...
+      - docker build -t adcart-api:$NODE_ENV --no-cache .
+      - docker tag adcart-api:$NODE_ENV $REPOSITORY_URI:$NODE_ENV
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - docker push $REPOSITORY_URI:$NODE_ENV
+      - echo Changing the Dockerrun file to the correct for this environment
+      - sed -i 's/DUMMY_ENV/'$NODE_ENV'/g' Dockerrun.aws.json
+artifacts:
+  files:
+    - Dockerrun.aws.json
+    - .ebextensions/*

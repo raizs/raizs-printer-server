@@ -1,0 +1,21 @@
+{
+  "MONGO_SAMPLE_CART": {
+    "ip" : "200.236.210.32",
+    "advertiser_id" : "thevelops_id_123",
+    "user_agent" : "mozilla",
+    "store_buyer_id" : "1",
+    "url" : "http://18.220.213.142/cart/",
+    "purchased" : false,
+    "order_id":"1234",
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdG9yZV9idXllcl9pZCI6MSwic3RvcmVfaWQiOiJ0aGV2ZWxvcHNfaWRfMTIzIiwicHVibGlzaGVyX2lkIjoiNWEwZGRiMDlmMzZkMjgwM2I4ZTNkNzM1IiwiaWF0IjoxNTEyMDUyNTQzfQ.OeJjoIR7QJz5BIunY85PWLjEe_hkzDqFvOtpIvHpT0A",
+    "items" : [ 
+        {
+            "name" : "Happy Ninja",
+            "quantity" : "1",
+            "image_url" : "http://18.220.213.142/wp-content/uploads/2013/06/hoodie_4_front.jpg",
+            "price" : "35",
+            "product_id" : "53"
+        }
+    ]
+	}
+}
