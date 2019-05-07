@@ -1,7 +1,7 @@
 import printer from "printer";
 import fs from "fs";
-import { spawn, exec } from 'child_process';
-import { join } from 'async-child-process';
+// import { spawn, exec } from 'child_process';
+// import { join } from 'async-child-process';
 import ngrok from "ngrok"
 import axios from "axios"
 
